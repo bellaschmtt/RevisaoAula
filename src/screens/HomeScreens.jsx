@@ -15,8 +15,8 @@ export default function HomeScreen() {
     // talvez tenha erro com os nome do banco de dados
     async function queryProdutos(NomeDoProduto = null){
         try{
-            const produtosRef = collection(db, "produtos");
-            const query = query(produtosRef, where("NomeDoProduto", "==", "uva"));
+            const produtosRef = collection(db, "produto");
+            const query = query(produtoRef, where("NomeDoProduto", "==", "uva"));
             // execute query
             const querySnapshot = await getDocs(queryProdutos); 
             const produtos = [];
